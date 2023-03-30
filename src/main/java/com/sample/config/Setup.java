@@ -29,7 +29,7 @@ public class Setup {
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         ThreadLocalDriver.setDriver(driver);
-
+//        driverSetUp();
     }
 
     public static void driverSetUp() {
