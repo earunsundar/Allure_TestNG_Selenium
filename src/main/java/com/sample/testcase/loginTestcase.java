@@ -1,5 +1,6 @@
 package com.sample.testcase;
 
+import com.sample.config.Setup;
 import io.qameta.allure.*;
 import com.sample.config.ThreadLocalDriver;
 import org.openqa.selenium.By;
@@ -11,11 +12,12 @@ import static org.testng.Assert.assertEquals;
 
 @Epic("User Management")
 @Feature("Login")
-public class loginTestcase {
+public class loginTestcase extends Setup {
+
+    @Test
     @Severity(BLOCKER)
     @Description("Verify that a valid user can login to the application")
     @Story("As a user I should be able to login to the application")
-    @Test
     public void loginUser() {
         setUserName("standard_user");
         setPassword("secret_sauce");

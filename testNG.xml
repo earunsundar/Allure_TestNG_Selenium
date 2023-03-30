@@ -1,21 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite configfailurepolicy="continue" name="Suite" thread-count="5">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Test Suite" verbose="1"  parallel="classes" thread-count="2">
 <!--    <listeners>-->
-<!--        <listener class-name="" />-->
+<!--        <listener class-name="util.AllureReportListener"/>-->
 <!--    </listeners>-->
-    <test name="Test" preserve-order="true">
-        <groups>
-            <run>
-                <include name="regression" />
-            </run>
-        </groups>
-        <!-- 		<packages>-->
-        <!--		<package> name ="com.Testcases.persona"</package>-->
-        <!-- 		</packages>-->
+    <test name="Regression Test">
         <classes>
-            <class name="com.sample.testcase.loginTestcase"/>
+            <class name="com.sample.testcase.loginTestcase" />
         </classes>
-
     </test>
 </suite>

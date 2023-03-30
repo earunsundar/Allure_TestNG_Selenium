@@ -8,7 +8,7 @@
  */
 package com.sample.config;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,13 +23,12 @@ public class Setup {
 
     @BeforeSuite
     public void initialization() {
-        WebDriver driver;
-        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver;
         ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
+        options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         ThreadLocalDriver.setDriver(driver);
-        driverSetUp();
-        System.out.println("Inside the initialization method");
 
     }
 

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.149 sec <<< FAILURE! - in TestSuite
+loginUser(com.sample.testcase.loginTestcase)  Time elapsed: 0.689 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because the return value of "com.sample.config.ThreadLocalDriver.getDriver()" is null
+	at com.sample.testcase.loginTestcase.loginUser(loginTestcase.java:21)
+
